@@ -318,6 +318,7 @@ void fill_truth_region(char *path, float *truth, int classes, int num_boxes, int
 {
     char labelpath[4096];
     replace_image_to_label(path, labelpath);
+    printf("Label file path: %s \n", labelpath);
 
     int count = 0;
     box_label *boxes = read_boxes(labelpath, &count);
